@@ -1,0 +1,26 @@
+<h2>todolist</h2>
+<div class="todolist">
+    <input class="form_input" type="text" [(ngModel)]="keywords" (keyup)="doAdd($event)" />
+    <hr>
+
+    <!--//0表示待辦事項，1表示已完成事項-->
+    <h3>待辦事項(正在進行)</h3> 
+    <ul>
+        <li *ngFor="let item of todolist;let key=index;" [hidden]="item.status==1" >
+            <input type="checkbox" (change)="changecheckbox()" [(ngModel)]="item.status"/>
+            {{item.title}}
+            <button (click)="deleteData(key)">刪除</button>
+        </li>
+    </ul> 
+
+
+    <h3>已完成事項</h3>
+    <ul>
+        <li *ngFor="let item of todolist;let key=index;" [hidden]="item.status==0" >
+            <input type="checkbox" (change)="changecheckbox()" [(ngModel)]="item.status"/>
+            {{item.title}}
+            <button (click)="deleteData(key)">刪除</button>
+        </li>
+    </ul> 
+    
+</div>

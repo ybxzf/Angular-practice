@@ -1,0 +1,14 @@
+<br><br><br><br>
+<button (click)="getData()">get请求数据</button>
+<ul>
+    <li *ngFor="let item of list">
+        {{item.title}}
+    </li>
+</ul>
+<br><br><hr><br><br>
+<button (click)="doLogin()">post提交数据</button>
+<br><br><hr><br><br>
+<button (click)="getJsonpData()">jsonp获取服务器数据(跨域的一种解决方案)</button>
+<br><br><hr><br><br>
+<button (click)="getAxiosData()">第三方模块axios获取服务器数据</button>
+

@@ -1,0 +1,12 @@
+<div class="content">
+
+    這是內容區域<br>
+    <button (click)="showAside()">彈出/隱藏側邊欄</button>
+    <button (click)="hideAside()">隱藏側邊欄</button>
+    <input type="file" id="uploader"  accept=".xlsx,.xls" (change)="readExcel($event)">
+    
+</div>
+<aside id="aside">
+
+    這是側邊欄
+</aside>

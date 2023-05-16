@@ -1,0 +1,24 @@
+<p>news works!</p>
+<h1>我是一個新聞組件</h1>
+<h1>{{title}}</h1>
+<hr>
+<div>
+    <ul *ngFor="let item of userlist">
+        <li>
+            {{item.username}}---{{item.age}}  
+        </li>
+    </ul>
+</div>
+<hr>
+<ul>
+    <li *ngFor="let it of cars">
+        <h1>{{it.cate}}</h1>
+        <h2 *ngFor="let item of it.list">
+            <ol>{{item.title}}----{{item.price}}</ol>
+        </h2>
+    </li>
+</ul>
+<button (click)="test()">testlist3</button>
+<div>
+   
+</div>

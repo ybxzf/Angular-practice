@@ -1,0 +1,11 @@
+#aside{
+    width: 200px;
+    height: 100%;
+    position:absolute;
+    right: 0px;
+    top:0px;
+    background-color: black;
+    color: #fff;
+    transform: translate(100%,0);
+    transition: all 1s;
+}

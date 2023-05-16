@@ -1,0 +1,74 @@
+<p>引入圖片</p>
+<h1>直接引入：</h1>
+<img src="assets/images/guoqi.jpg" alt="國旗" />
+<h1>ts引入：</h1>
+<img [src]="picurl" />
+
+<h1>循环数据 显示数据的索引（key）</h1>
+<ul>
+    <li *ngFor="let item of list;let key=index;">
+            <span *ngIf="key==1" class="red">
+                {{key}}--{{item.title}}
+            </span>
+            <span *ngIf="key!=1" class="blue">
+                {{key}}--{{item.title}}
+            </span>
+    </li>
+</ul>
+
+<h1>条件判断 *ngIf</h1>
+<div *ngIf="flag">
+    <h4>对的</h4>
+</div>
+<div *ngIf="!flag">
+    <h4>错的</h4>
+</div>
+<h1>条件判断 *ngswitch</h1>
+<span [ngSwitch]="oderStatus">
+<p *ngSwitchCase="1">
+    未支付
+</p>
+<p *ngSwitchCase="2">
+    已支付
+</p>
+<p *ngSwitchCase="3">
+    已发货
+</p>
+<p *ngSwitchCase="4">
+    已收货
+</p>
+<p *ngSwitchDefault>
+    无效
+</p>
+</span>
+
+
+<h1>绑定属性[ngClass]、[ngStyle]</h1>
+<h3>
+使用[ngClass]循环数组，是指定元素样式为指定颜色
+</h3>
+<li *ngFor="let item of list; let key=index;" 
+[ngClass]="{
+    'red':key==0,
+    'blue':key==1,
+    'orange':key==2
+}"
+>
+    {{key}}--{{item.title}}
+</li>
+
+<h1>管道</h1>
+{{today | date:'yyyy-MM-dd HH-mm-ss'}}
+<h1>执行事件</h1>
+<button (click)="defult()">点击恢复数据</button>
+<button (click)="getData()">点击获取数据</button>
+<button (click)="setData()">点击改变数据</button>
+
+<input type="text" (keydown)="keyDown($event)" />
+<input type="text" (keyup)="keyUp($event)" />
+
+<h1 class="red">重點：雙向數據綁定：MVVM 只是針對表單</h1>
+<input type="text"  [(ngModel)]="inputValue" />
+{{inputValue}}
+
+

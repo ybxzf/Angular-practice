@@ -1,0 +1,19 @@
+.header{
+    background: #000;
+    height: 44px;
+    line-height: 44px;
+    color: #fff;
+
+    a{
+    // background:rgb(229, 177, 177);
+
+        color:#fff;
+        padding: 20px;
+
+    }
+    a.active{
+    // background:rgb(229, 177, 177);
+
+        color: red;
+    }
+}

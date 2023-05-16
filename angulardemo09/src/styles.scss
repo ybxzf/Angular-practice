@@ -1,0 +1,17 @@
+.content{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    .left{
+        width: 200px;
+        border-right:5px solid #eee;
+        height: 500px;
+
+    }
+    .right{
+        flex:1px;
+
+    }
+
+
+}
